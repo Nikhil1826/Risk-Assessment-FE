@@ -1,0 +1,108 @@
+.dialog-title {
+    font-family: "Graphik" !important; 
+}
+
+.content-container {
+    margin-top: 10px;
+}
+
+.description-heading {
+    margin-bottom: 2px;
+}
+
+.description-text {
+    font-family: "Graphik" !important;   
+}
+
+.form-container {
+    margin-top: 15px;
+    font-family: "Graphik" !important;
+}
+
+.form-label {
+    font-size: 12px;
+    color: #0000008A;
+    font-family: "Graphik" !important;
+}
+
+.comment-box {
+    outline: none;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    resize: none;
+    font-family: "Graphik" !important;
+}
+
+.cancel-btn {
+    color: #d30505de;
+}
+
+.cancel-btn:hover {
+    background-color: #d30505de;
+    color: white;
+    border-radius: 5px;
+}
+
+.save-btn {
+    color: #29df78;
+}
+
+.save-btn:hover:enabled {
+    background-color: #29df78;
+    color: white;
+    border-radius: 5px;
+}
+
+.save-btn:disabled {
+    cursor: not-allowed;
+    border-radius: 0;
+}
+
+.history-table {
+    font-family: "Graphik" !important;
+}
+
+th, td {
+    padding: 20px !important;
+}
+
+td {
+    max-width: 250px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+tr:hover {
+    background-color: #F1F2F4;
+}
+
+td:hover {
+    cursor: pointer;
+}
+
+.history-table-container {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.history-table-container::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+  }
+
+  .history-table-container::-webkit-scrollbar-track {
+    width: 8px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background: white;
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 1);
+    border-radius: 10px;
+  }
+
+  .history-table-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background: #8d2de2e5;
+  }

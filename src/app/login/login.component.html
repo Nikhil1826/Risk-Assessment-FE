@@ -1,0 +1,27 @@
+<div class="float-left width-100">
+    <div class="float-left width-50 left-container">
+        <h2 class="sub-heading-risk-assessment-tool">Risk Assessment Tool</h2>
+        <div class="intro-text">This a risk assessment tool which allows the risk managers to view and assess the risks assigned to them.</div>
+    </div>
+    <div class="float-left width-50 right-container">
+        <div class="float-left width-100 right-inner-container">
+            <h1 class="margin-bottom-10">Login</h1>
+            <div class="welcome-text">Welcome back! Please login to your account.</div>
+            <div class="float-left width-100 margin-top-50">
+                <form [formGroup]="loginForm">
+                    <div class="float-left width-100">
+                        <label class="float-left width-100 label-text">User Name</label>
+                        <input class="float-left login-inputfield" type="text" placeholder="Enter User Name" formControlName="userName">
+                    </div>
+                    <div class="float-left width-100 margin-top-40">
+                        <label class="float-left width-100 label-text">Password</label>
+                        <input class="float-left login-inputfield" type="password" placeholder="Enter Password" formControlName="password">
+                    </div>
+                    <div class="float-left width-65 margin-top-50">
+                        <button class="login-btn width-100 cursor-pointer" type="button" (click)="onLoginClick()" [disabled]="!loginForm.valid">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<h2 class="dialog-title" mat-dialog-title>{{data.riskName}}</h2>
+<mat-dialog-content class="mat-typography content-container">
+    <p class="form-label description-heading">Description</p>
+    <p class="description-text">{{data.riskDescription}}</p>
+    <div *ngIf="data.action && data.action === 'assess'" class="form-container float-left width-100">
+        <form [formGroup]="assessmentForm">
+            <div class="float-left width-100">
+                <label class="form-label width-100">Assessment Score</label>
+                <mat-slider thumbLabel tickInterval="1" class="width-100" min="0" max="5"
+                    formControlName="assessmentScore"></mat-slider>
+            </div>
+            <div class="float-left width-100">
+                <label class="form-label width-100">Comment</label>
+                <textarea class="comment-box width-100" cols="25" rows="5" formControlName="comment"></textarea>
+            </div>
+        </form>
+    </div>
+
+    <div class="history-table-container" *ngIf="data.action && data.action === 'history'">
+        <table class="history-table" mat-table [dataSource]="dataSource">
+            <ng-container matColumnDef="assessmentScore">
+                <th mat-header-cell *matHeaderCellDef> Assessment Score </th>
+                <td mat-cell *matCellDef="let element"> <span [matTooltip]="element.assessmentScore"
+                        matTooltipPosition="above">{{element.assessmentScore}}</span></td>
+            </ng-container>
+
+            <ng-container matColumnDef="comment">
+                <th mat-header-cell *matHeaderCellDef> Comment </th>
+                <td mat-cell *matCellDef="let element"><span [matTooltip]="element.comment"
+                        matTooltipPosition="above">{{element.comment}}</span></td>
+            </ng-container>
+
+            <ng-container matColumnDef="assessedDate">
+                <th mat-header-cell *matHeaderCellDef> Timestamp (UTC) </th>
+                <td mat-cell *matCellDef="let element"> <span [matTooltip]="element.assessedDate + ' UTC'"
+                        matTooltipPosition="above">{{element.assessedDate}} UTC</span></td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+            <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+        </table>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button class="cancel-btn" (click)="onDialogClose('cancel')">Cancel</button>
+    <button *ngIf="data.action && data.action === 'assess'" mat-button class="save-btn" (click)="onDialogClose('save')"
+        [disabled]="!assessmentForm.valid">Save</button>
+</mat-dialog-actions>
+
+<!-- cdkFocusInitial -->

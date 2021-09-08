@@ -1,0 +1,34 @@
+<div class="float-left width-100 risks-container">
+    <div class="float-left width-30">
+        <div class="float-left width-100 upper-container">
+            <h2 class="risks-text">Risks ({{(riskList ? riskList.length : 0)}})</h2>
+            <mat-icon *ngIf="mode !== 'EDIT'" class="add-icon margin-left-10 cursor-pointer" matTooltip="Add"
+                matTooltipPosition="right" (click)="onAddClick()">add</mat-icon>
+        </div>
+        <ng-container *ngIf="!isNoRiskAvailable">
+            <div class="float-left width-100 risk-list-container">
+                <mat-nav-list>
+                    <mat-list-item class="list-item" *ngFor="let risk of riskList" (click)="onRiskClick(risk)"
+                        [ngClass]="{'selected-risk': risk.isActive}">
+                        <h2 matLine>{{risk.name}}</h2>
+                        <p matLine>{{risk.description}}</p>
+                        <mat-divider></mat-divider>
+                    </mat-list-item>
+                </mat-nav-list>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="isNoRiskAvailable">
+            <div class="float-left width-100 margin-top-30 no-risk-available-warning">
+                <h4 class="heading">No risks available</h4>
+                <p class="content">Please click <span class="here-text cursor-pointer"
+                        (click)="onAddClick()">HERE</span> to create new risk.
+                </p>
+            </div>
+        </ng-container>
+    </div>
+    <div class="float-left width-70 padding-30">
+        <app-risk-form *ngIf="mode" [risk]="selectedRisk" [mode]="mode" (closeEvent)="onFormClose($event)"
+            (riskUpdateEvent)="onRiskUpdate($event)"></app-risk-form>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="padding-30">
+    <div class="risk-inner-container">
+        <h2 class="welcome-text" *ngIf="user">Welcome, {{user.firstName}} {{user.lastName ? user.lastName : ''}}</h2>
+        <h2 class="welcome-text" *ngIf="!user">Welcome</h2>
+        <h3 class="risks-text">Risks ({{(assigendRiskList ? assigendRiskList.length : 0)}})</h3>
+        <div class="risk-card-container animate__animated animate__fadeInLeft" *ngIf="assigendRiskList">
+            <mat-card class="risk-card-content-container" *ngFor="let risk of assigendRiskList">
+                <mat-card-header>
+                    <mat-card-title>{{risk.riskName}}</mat-card-title>
+                    <mat-card-subtitle
+                        [ngClass]="{'risk-assessed-text': !risk.assessmentAvailable, 'risk-not-assessed-text': risk.assessmentAvailable}">
+                        {{risk.assessmentAvailable ? 'Not Assessed' : 'Assessed'}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-divider></mat-divider>
+                <mat-card-content class="risk-card-content">
+                    <div class="risk-description-container line-clamp">
+                        <p class="cursor-pointer" [matTooltip]="risk.riskDescription">{{risk.riskDescription}}</p>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions class="card-btn-container">
+                    <button *ngIf="risk.assessmentAvailable" class="btn assess-button" mat-button
+                        (click)="onActionBtnClick(risk, 'assess')">Assess</button>
+                    <button *ngIf="risk.assessments && risk.assessments.length > 0" class="btn history-btn"
+                        mat-button (click)="onActionBtnClick(risk, 'history')">History</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

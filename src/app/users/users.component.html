@@ -1,0 +1,18 @@
+<div class="float-left width-100 users-container">
+    <div class="float-left width-30">
+        <h2 class="users-text">Users ({{(userList ? userList.length : 0)}})</h2>
+        <div class="float-left width-100 user-list-container">
+            <mat-nav-list>
+                <mat-list-item class="list-item" *ngFor="let user of userList" (click)="onUserClick(user)"
+                    [ngClass]="{'selected-user': user.isActive}">
+                    <h2 matLine>{{user.firstName}} {{user.lastName}}</h2>
+                    <p matLine>{{user.login}}</p>
+                    <mat-divider></mat-divider>
+                </mat-list-item>
+            </mat-nav-list>
+        </div>
+    </div>
+    <div class="float-left width-70 padding-30">
+        <app-user-form *ngIf="selectedUserId" [userId]="selectedUserId" (closeEvent)="onFormClose($event)"></app-user-form>
+    </div>
+</div>

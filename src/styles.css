@@ -1,1 +1,167 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: "Graphik" !important;
+    width: 100vw;
+    /* height: 100vh; */
+    overflow-x: hidden;
+    /* overflow: hidden; */
+}
+
+.display-flex {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.width-100 {
+    width: 100%;
+}  
+
+.float-left {
+    float: left;
+}
+
+.width-50 {
+    width: 50% !important;
+}  
+
+.width-30 {
+    width: 30%;
+}
+
+.width-70 {
+    width: 70%;
+}
+
+.width-40 {
+    width: 40%;
+}
+
+.width-60 {
+    width: 60%;
+}
+
+.width-65 {
+    width: 65%;
+}  
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+.margin-top-40 {
+    margin-top: 40px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.padding-30 {
+    padding: 30px;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.margin-left-5 {
+    margin-left: 5px;
+}
+
+.margin-left-10 {
+    margin-left: 10px !important;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+.margin-left-auto {
+    margin-left: auto;
+}
+
+.mat-accent .mat-slider-track-fill {
+    background-color: #8E2DE2 !important;
+}
+
+.mat-slider-thumb-label {
+    background-color: #8E2DE2 !important;
+
+}
+
+.mat-slider-thumb {
+    background-color: #8E2DE2 !important;
+}
+
+.padding-20 {
+    padding: 20px !important;
+}
+
+.float-right {
+    float: right;
+}
+
+.margin-right-10-percent {
+    margin-right: 10%;
+}
+
+.mat-radio-custom-btn .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #4a00e0ad;
+}
+.mat-radio-custom-btn .mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: #4a00e0ad;
+}
+.mat-radio-custom-btn .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple) {
+    background-color: #4a00e0ad;
+}
+.mat-radio-custom-btn .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+    background-color: #4a00e0ad;
+}
+.mat-radio-custom-btn .mat-radio-disabled {
+    cursor: not-allowed;
+}
+.mat-radio-custom-btn .mat-radio-disabled .mat-radio-label {
+    cursor: not-allowed;
+}
+/* .mat-radio-custom-label .mat-radio-label-content {
+    padding-left: 5px;
+} */
+
+.mat-snack-bar-container {
+    color: white !important;
+}
+
+.mat-snack-bar-container button, .mat-simple-snackbar span {
+    font-family: "Graphik" !important;
+    color: white;
+}
+
+.error-snackbar {
+    background: #d30505 !important;
+}
+
+.success-snackbar {
+    background: #07b854 !important;
+}

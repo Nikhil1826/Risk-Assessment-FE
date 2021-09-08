@@ -1,0 +1,81 @@
+.left-container {
+    display: inline-block;
+    background: url("../../assets/images/Amin.jpg");
+    background-size: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.right-container {
+    display: inline-block;
+}
+
+.right-inner-container {
+    padding: 30px;
+    margin: 10% 10% 0 10%;
+}
+
+.welcome-text {
+    font-size: 14px;
+    color: #00000089;
+}
+
+.label-text {
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #00000089;
+    font-weight: 500;
+  }
+
+.login-inputfield {
+    outline: none;
+    padding: 15px;
+    border: 1px solid #ABB0B6;
+    border-radius: 5px;
+    width: 65%;
+    font-family: "Graphik" !important;
+}
+
+.login-inputfield::-webkit-input-placeholder {
+    color: #ABB0B6;
+  }
+
+  .login-inputfield::-moz-placeholder {
+    color: #ABB0B6;
+  }
+
+  .login-inputfield:-ms-input-placeholder {
+    color: #ABB0B6;
+  }
+
+.login-btn {
+    font-size: 15px;
+    padding: 15px;
+    background: url("../../assets/images/Amin.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: none;
+    color: white;
+    font-family: "Graphik";
+    border-radius: 5px;
+}
+
+.login-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.sub-heading-risk-assessment-tool {
+    font-size: 25px;
+    color: white;
+    position: relative;
+    top: 20%;
+}
+
+.intro-text {
+    padding: 0px 40px;
+    top: 25%;
+    position: relative;
+    color: white;
+    font-size: 15px;
+}

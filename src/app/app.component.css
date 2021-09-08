@@ -1,0 +1,48 @@
+.navbar {
+    height: 55px;
+    position: fixed;
+    background: url("../assets/images/Amin.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    box-shadow: 11px 0px 10px #00000080;
+    z-index: 2;
+}
+
+.navbar-inner-container {
+    width: 100%;
+    padding: 0 10px;
+    margin: 0;
+    position: relative;
+}
+
+.heading-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    top: 4px;
+}
+
+.content-container {
+    float: left;
+    /* padding: 55px 0 0;
+    margin-bottom: 50px; */
+    width: 100%;
+}
+
+.btn-container {
+    display: inline-block;
+    color: white;
+}
+
+.btn-container .btn {
+    font-family: "Graphik" !important;
+    margin-right: 5px;
+}
+
+.btn-container .btn:hover, .active-route {
+    background-color: white;
+    color: #8E2DE2;
+    border-radius: 5px;
+}
+

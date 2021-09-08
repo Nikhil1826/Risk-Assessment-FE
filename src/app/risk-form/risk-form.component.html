@@ -1,0 +1,32 @@
+<div *ngIf="mode" class="float-left width-100 risk-details-container animate__animated animate__fadeInRight">
+    <div class="float-left width-100 action-container">
+        <span class="risk-details-text">Risk Details</span>
+        <mat-icon *ngIf="mode === 'EDIT' && !isActionBtnVisible" class="cursor-pointer margin-left-10 icon"
+            matTooltip="Edit" matTooltipPosition="above" (click)="onEditClick()">edit</mat-icon>
+        <mat-icon *ngIf="mode === 'EDIT' && !isActionBtnVisible" class="cursor-pointer icon delete-icon"
+            matTooltip="Delete" matTooltipPosition="above" (click)="onDeleteClick()">delete_forever</mat-icon>
+        <button class="btn cancel-btn margin-left-10" *ngIf="mode === 'EDIT' && isActionBtnVisible" mat-button
+            (click)="onCancelClick()">Cancel</button>
+        <button class="btn save-btn" *ngIf="isActionBtnVisible" mat-button
+            [ngClass]="{'margin-left-10': mode === 'ADD'}" [disabled]="!riskDetailsForm.valid"
+            (click)="onSaveClick()">Save</button>
+        <mat-icon class="cursor-pointer icon close-icon margin-left-auto" matTooltip="Close" matTooltipPosition="above"
+            (click)="onCloseClick()">close</mat-icon>
+    </div>
+
+    <div class="float-left width-100 margin-top-30">
+        <form [formGroup]="riskDetailsForm">
+            <div class="float-left width-100">
+                <label class="float-left width-100 label-text">Name</label>
+                <input class="float-left form-inputfield width-50" type="text" placeholder="Enter risk name"
+                    formControlName="name">
+            </div>
+
+            <div class="float-left width-100 margin-top-40">
+                <label class="float-left width-100 label-text">Description</label>
+                <textarea class="float-left width-50 padding-10 form-textarea" placeholder="Enter description" rows="10"
+                    formControlName="description"></textarea>
+            </div>
+        </form>
+    </div>
+</div>

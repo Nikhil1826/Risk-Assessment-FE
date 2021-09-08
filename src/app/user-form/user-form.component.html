@@ -1,0 +1,72 @@
+<div *ngIf="user"
+    class="float-left width-100 user-details-container animate__animated animate__fadeInRight">
+    <div class="float-left width-100">
+        <span class="user-details-text">User Details</span>
+        <mat-icon *ngIf="!isActionBtnVisible" class="cursor-pointer margin-left-10 icon" matTooltip="Edit"
+            matTooltipPosition="above" (click)="onEditClick()">edit</mat-icon>
+        <button class="btn cancel-btn margin-left-10" *ngIf="isActionBtnVisible" mat-button
+            (click)="onCancelClick()">Cancel</button>
+        <button class="btn save-btn" *ngIf="isActionBtnVisible" mat-button
+            [disabled]="!userDetailsForm.valid">Save</button>
+        <mat-icon class="float-right cursor-pointer icon" matTooltip="Close" matTooltipPosition="above"
+            (click)="onCloseClick()">close</mat-icon>
+    </div>
+    <div class="float-left width-100 margin-top-30">
+        <form [formGroup]="userDetailsForm">
+            <div class="float-left width-100">
+                <div class="float-left width-40 margin-right-10-percent">
+                    <label class="float-left width-100 label-text">First Name</label>
+                    <input class="float-left form-inputfield" type="text" placeholder="Enter first name"
+                        formControlName="firstName">
+                </div>
+                <div class="float-left width-40">
+                    <label class="float-left width-100 label-text">Last Name</label>
+                    <input class="float-left form-inputfield" type="text" placeholder="Enter last name"
+                        formControlName="lastName">
+                </div>
+            </div>
+
+            <div class="float-left width-100 margin-top-40">
+                <div class="float-left width-40 margin-right-10-percent">
+                    <label class="float-left width-100 label-text">User Name</label>
+                    <input class="float-left form-inputfield" type="text" placeholder="Enter user name"
+                        formControlName="userName">
+                </div>
+                <div class="float-left width-40">
+                    <label class="float-left width-100 label-text">Email</label>
+                    <input class="float-left form-inputfield" type="email" placeholder="Enter email"
+                        formControlName="email">
+                </div>
+            </div>
+
+            <div class="float-left width-100 margin-top-40">
+                <div class="float-left width-100">
+                    <label class="float-left width-100 label-text">Admin</label>
+                    <mat-radio-group class="mat-radio-custom-btn" formControlName="admin">
+                        <mat-radio-button class="radio-label" value="true">True</mat-radio-button>
+                        <mat-radio-button class="radio-label margin-left-10" value="false">False</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </div>
+        </form>
+
+        <div class="float-left width-100 display-flex">
+            <div class="float-left width-50">
+                <h3>Assigned Risks</h3>
+                <div class="float-left width-100">
+                    <mat-selection-list>
+                        <mat-list-option>
+                            <h4 matLine>Name</h4>
+                            <p matLine>Description</p>
+                            <mat-divider></mat-divider>
+                        </mat-list-option>
+                    </mat-selection-list>
+                </div>
+            </div>
+
+            <div class="float-left width-50">
+                <h3>Available Risks</h3>
+            </div>
+        </div>
+    </div>
+</div>

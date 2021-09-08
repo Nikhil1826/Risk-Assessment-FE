@@ -1,0 +1,63 @@
+.user-details-text {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.label-text {
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #00000089;
+    font-weight: 500;
+  }
+
+.form-inputfield {
+    outline: none;
+    padding: 15px;
+    border: 1px solid #ABB0B6;
+    border-radius: 5px;
+    width: 100%;
+    font-family: "Graphik" !important;
+}
+
+.radio-label {
+    font-family: "Graphik" !important;
+    font-size: 15px !important;
+}
+
+.form-inputfield:disabled {
+    cursor: not-allowed;
+}
+
+.icon {
+    font-size: 20px;
+    color: #4a00e0ad;
+}
+
+.btn {
+    font-family: "Graphik" !important;
+}
+
+.cancel-btn {
+    color: #d30505de;
+}
+
+.cancel-btn:hover {
+    background-color: #d30505de;
+    color: white;
+    border-radius: 5px;
+}
+
+.save-btn {
+    color: #29df78;
+}
+
+.save-btn:hover:enabled {
+    background-color: #29df78;
+    color: white;
+    border-radius: 5px;
+}
+
+.save-btn:disabled {
+    cursor: not-allowed;
+    border-radius: 0;
+}

@@ -1,0 +1,68 @@
+.action-container {
+    display: flex;
+    align-items: center;
+}
+
+.action-container .risk-details-text {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.action-container .icon {
+    font-size: 20px;
+    color: #4a00e0ad;
+}
+
+.action-container .close-icon {
+    font-weight: bold;
+}
+
+.action-container .btn {
+    font-family: "Graphik" !important;
+}
+
+.action-container .cancel-btn, .delete-icon {
+    color: #d30505de !important;
+}
+
+.action-container .cancel-btn:hover {
+    background-color: #d30505de;
+    color: white !important;
+    border-radius: 5px;
+}
+
+.action-container .save-btn {
+    color: #29df78;
+}
+
+.action-container .save-btn:hover:enabled {
+    background-color: #29df78;
+    color: white;
+    border-radius: 5px;
+}
+
+.action-container .save-btn:disabled {
+    cursor: not-allowed;
+    border-radius: 0;
+    opacity: 0.6;
+}
+
+.label-text {
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #00000089;
+    font-weight: 500;
+    font-family: "Graphik" !important;
+  }
+
+.form-inputfield, .form-textarea {
+    outline: none;
+    padding: 15px;
+    border: 1px solid #ABB0B6;
+    border-radius: 5px;
+    font-family: "Graphik" !important;
+}
+
+.form-inputfield:disabled, .form-textarea:disabled {
+    cursor: not-allowed;
+}
